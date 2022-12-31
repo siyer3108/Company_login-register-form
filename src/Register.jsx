@@ -23,7 +23,7 @@ export const Register = (props) => {
 {
   let data={Rname,Bname,Aline1,Aline2,City,State,pincode,compemail,companynum,KeyPerFirstName,KeyPerLastName,KeyPerPhone
             , Keyemail,UserName,password   }
-// console.warn(data);
+
   fetch("https://api.crm.autoneticsamples.7d5188c0fb88.autonetic.cloud/api/company/register", {
     method: "POST",
     headers: {
@@ -34,7 +34,7 @@ export const Register = (props) => {
     },
     body:JSON.stringify(data)
   }).then((resp)=>{
-    // console.warn("resp",resp);;
+    
     resp.json().then((result)=>{
       console.warn("result",result)
     })
